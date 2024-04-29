@@ -19,12 +19,16 @@ console.assert(sumBuggy(1, 2) === 3); // fails, because bug!
 // FUNCTION IMPLEMENTATION
 const assertEqual = function (actual, expected) {
   if (actual !== expected) {
-    console.log("Assertion failed: " + actual + " !== " + expected);
+    console.log("🛑🛑🛑 Assertion Failed: " + actual + " !== " + expected);
   } else {
-    console.log("Assertion passed: " + actual + " === " + expected);
+    console.log("✅✅✅ Assertion passed: " + actual + " === " + expected);
   }
 };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+//assertEqual("Lighthouse Labs", "Bootcamp");
+//assertEqual(1, 1);
+assertEqual("james", "james");
+assertEqual("sam", "steph");
+assertEqual(13, 13);
+assertEqual(31, 39);
