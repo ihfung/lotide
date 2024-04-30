@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -6,14 +6,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function(array) {
-  let newArr = [];
-  if (array.length !== 0) {
-    newArr = array.slice(1);
-    return newArr;
-  } else {
-    return undefined;
-  }
+const tail = function (array) {
+  return array.slice(1);
 };
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
@@ -29,4 +23,4 @@ assertEqual(words.length, 3); // original array should still have 3 elements!
 const test = tail(["Japan"]);
 assertEqual(test.length, 0);
 const testTwo = tail([]);
-assertEqual(testTwo, undefined);
+assertEqual(testTwo.length, 0);
