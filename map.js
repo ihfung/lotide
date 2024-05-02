@@ -8,7 +8,6 @@ const eqArrays = function(arr1, arr2) {
       result = false;
     }
   }
-  console.log(result);
   return result;
 };
 
