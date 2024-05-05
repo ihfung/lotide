@@ -24,3 +24,4 @@ const countLetters = function(sentence) {
 const sentenceToCount = countLetters("lighthouse in the house");
 
 assertEqual(sentenceToCount["l"], 1);
+module.exports = countLetters;
