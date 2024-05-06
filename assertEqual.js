@@ -25,10 +25,6 @@ const assertEqual = function(actual, expected) { // function that takes in two p
   }
 };
 
-// TEST CODE
-//assertEqual("Lighthouse Labs", "Bootcamp");
-//assertEqual(1, 1);
-assertEqual("james", "james");
-assertEqual("sam", "steph");
-assertEqual(13, 13);
-assertEqual(31, 39);
+
+
+module.exports = assertEqual;

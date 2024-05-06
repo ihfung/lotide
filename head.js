@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
-  }
-};
+const assertEqual = require("./assertEqual");
 
 const head = function(array) {
   if (array.length !== 0) {  // check if the array is not empty
@@ -21,3 +15,4 @@ assertEqual(head([]), undefined);
 assertEqual(head([39, 6, 7]), 31);
 assertEqual(head(["New", "Used", "Well-worn"]), "Jeans");
 assertEqual(head([]), 13);
+
