@@ -3,7 +3,6 @@ const assertArraysEqual = require('../assertArraysEqual');
 
 
 //Test Cases to see if arrays are equal
-
 assertArraysEqual(middle([1]), []); // => should PASS
 assertArraysEqual(middle([1, 2]), []); // => should PASS
 assertArraysEqual(middle([1, 2, 3]), [2]); // => should PASS
