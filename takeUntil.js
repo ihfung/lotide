@@ -21,12 +21,12 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const takeUntil = function(array, callback) {
-  let results = [];
-  for (let value of array) {
-    if (!callback(value)) {
-      results.splice(results.length, 0, value);
+  let results = []; // create an empty array
+  for (let value of array) { // loop through the array
+    if (!callback(value)) { //  check if the callback function returns false
+      results.splice(results.length, 0, value); // add the value to the array
     } else {
-      return results;
+      return results; // return the array
     }
   }
 };

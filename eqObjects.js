@@ -22,18 +22,18 @@ const assertEqual = function(actual, expected) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  const obj1 = Object.keys(object1);
-  const obj2 = Object.keys(object2);
+  const obj1 = Object.keys(object1); // get the keys of the first object
+  const obj2 = Object.keys(object2);// get the keys of the second object
   let result = true;
-  if (obj1.length !== obj2.length) {
+  if (obj1.length !== obj2.length) { // check if the length of the keys are the same
     result = false;
   }
-  for (let i of obj1) {
-    if (Array.isArray(object1[i]) && Array.isArray(object2[i])) {
-      if (!eqArrays(object1[i], object2[i])) {
+  for (let i of obj1) { // loop through the keys
+    if (Array.isArray(object1[i]) && Array.isArray(object2[i])) { // check if the value is an array
+      if (!eqArrays(object1[i], object2[i])) { // call eqArrays function
         result = false;
       }
-    } else if (object1[i] !== object2[i]) {
+    } else if (object1[i] !== object2[i]) { // check if the values are the same
       result = false;
     }
   }

@@ -7,10 +7,10 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function(object, value) {
-  let findKey = Object.keys(object);
-  for (let i of findKey) {
-    if (object[i] === value) {
-      return i;
+  let findKey = Object.keys(object);  // get the keys of the object
+  for (let i of findKey) { // loop through the keys
+    if (object[i] === value) { // check if the value is the same as the value
+      return i; // return the key
     }
   }
 };

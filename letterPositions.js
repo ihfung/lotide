@@ -23,12 +23,12 @@ const assertArraysEqual = function(actual, expected) {
 const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here
-  for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] !== " ") {
-      if (results[sentence[i]]) {
-        results[sentence[i]].push(i);
+  for (let i = 0; i < sentence.length; i++) { // loop through the sentence
+    if (sentence[i] !== " ") { // check if the letter is not a space
+      if (results[sentence[i]]) { // check if the letter is already in the object
+        results[sentence[i]].push(i); // add the index to the array
       } else {
-        results[sentence[i]] = [i];
+        results[sentence[i]] = [i];  // add the letter to the object
       }
     }
   }

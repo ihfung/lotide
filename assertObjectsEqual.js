@@ -11,19 +11,19 @@ const eqArrays = function(arr1, arr2) {
   return result;
 };
 
-const eqObjects = function(object1, object2) {
-  const obj1 = Object.keys(object1);
-  const obj2 = Object.keys(object2);
+const eqObjects = function(object1, object2) { // compare two objects
+  const obj1 = Object.keys(object1);  // get the keys of the first object
+  const obj2 = Object.keys(object2); // get the keys of the second object
   let result = true;
-  if (obj1.length !== obj2.length) {
+  if (obj1.length !== obj2.length) {  // check if the length of the keys are the same
     result = false;
   }
-  for (let i of obj1) {
-    if (Array.isArray(object1[i]) && Array.isArray(object2[i])) {
-      if (!eqArrays(object1[i], object2[i])) {
+  for (let i of obj1) { // loop through the keys
+    if (Array.isArray(object1[i]) && Array.isArray(object2[i])) { // check if the value is an array
+      if (!eqArrays(object1[i], object2[i])) { // call eqArrays function
         result = false;
       }
-    } else if (object1[i] !== object2[i]) {
+    } else if (object1[i] !== object2[i]) { // check if the values are the same
       result = false;
     }
   }
@@ -31,10 +31,10 @@ const eqObjects = function(object1, object2) {
 };
 
 // FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function(actual, expected) {
+const assertObjectsEqual = function(actual, expected) { // function that takes in two parameters
   // Implement me!
-  const inspect = require("util").inspect; // <= add this line
-  if (!eqObjects(actual, expected)) {
+  const inspect = require("util").inspect; // <= add this line to use the inspect function
+  if (!eqObjects(actual, expected)) { // call eqObjects function
     console.log(
       `🛑🛑🛑 Assertion failed: ${inspect(actual)} !== ${inspect(expected)}`
     );

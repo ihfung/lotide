@@ -17,8 +17,8 @@ console.assert(sumBuggy(1, 2) === 3); // fails, because bug!
 */
 
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
+const assertEqual = function(actual, expected) { // function that takes in two parameters
+  if (actual !== expected) { // check if the actual value is equal to the expected value
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
     console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);

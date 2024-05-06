@@ -1,11 +1,11 @@
 const eqArrays = function(arr1, arr2) {
   let result = true;
-  if (arr1.length !== arr2.length) {
-    result = false;
+  if (arr1.length !== arr2.length) { // check if the length of the arrays is the same
+    result = false; // if not, return false
   }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      result = false;
+  for (let i = 0; i < arr1.length; i++) { // loop through the arrays
+    if (arr1[i] !== arr2[i]) { // check if the elements of the arrays are the same
+      result = false; // if not, return false
     }
   }
   return result;
@@ -22,8 +22,8 @@ const assertArraysEqual = function(actual, expected) {
 
 const map = function(array, callback) {
   const results = [];
-  for (let item of array) {
-    results.push(callback(item));
+  for (let item of array) { // loop through the array
+    results.push(callback(item)); // call the callback function and push the result to the results array
   }
   return results;
 };

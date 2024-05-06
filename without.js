@@ -21,12 +21,12 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const without = function(sourceArray, itemsToRemove) {
-  let newArray = [];
-  for (let i = 0; i < sourceArray.length; i++) {
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (sourceArray[i] === itemsToRemove[j]) {
-        sourceArray.splice(i, 1);
-        newArray = sourceArray;
+  let newArray = []; // create an empty array
+  for (let i = 0; i < sourceArray.length; i++) { // loop through the source array
+    for (let j = 0; j < itemsToRemove.length; j++) { // loop through the items to remove
+      if (sourceArray[i] === itemsToRemove[j]) { // check if the elements are the same
+        sourceArray.splice(i, 1); // remove the element from the source array
+        newArray = sourceArray; // assign the source array to the new array
       }
     }
   }

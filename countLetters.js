@@ -6,14 +6,14 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(sentence) {
+const countLetters = function(sentence) { // function that takes in a sentence
   let result = {};
-  for (const letter of sentence) {
-    if (letter !== " ") {
-      if (result[letter]) {
-        result[letter] += 1;
+  for (const letter of sentence) { // loop through the sentence
+    if (letter !== " ") { // check if the letter is not a space
+      if (result[letter]) { // check if the letter is already in the object
+        result[letter] += 1; // increment the letter in the object
       } else {
-        result[letter] = 1;
+        result[letter] = 1; // add the letter to the object
       }
     }
   }
@@ -24,4 +24,3 @@ const countLetters = function(sentence) {
 const sentenceToCount = countLetters("lighthouse in the house");
 
 assertEqual(sentenceToCount["l"], 1);
-module.exports = countLetters;
