@@ -1,8 +1,8 @@
 {
   "name": "@ihfung/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "Lotide project clone for Lighthouse Labs",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
