@@ -1,4 +1,3 @@
-const assertEqual = require("./assertEqual");
 
 const head = function(array) {
   if (array.length !== 0) {  // check if the array is not empty
@@ -8,11 +7,4 @@ const head = function(array) {
   }
 };
 
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]), undefined);
-
-assertEqual(head([39, 6, 7]), 31);
-assertEqual(head(["New", "Used", "Well-worn"]), "Jeans");
-assertEqual(head([]), 13);
-
+module.exports = head; // export the function to be used in other files
