@@ -40,3 +40,7 @@ assertArraysEqual(flatten([1, 2, 3, 4, 5, 6]), [1, 2, 3, 4, 5, 6]); // => ✅ As
 assertArraysEqual(flatten([1, 2, [3, 4], 5]), [1, 2, 3, 4, 5, 6]); // => 🛑 Assertion Failed
 assertArraysEqual(flatten([1, [2, 3], 4, 5]), [1, 2, 3, 4, 6]); // => 🛑 Assertion Failed
 assertArraysEqual(flatten([1, [2], [3, 4], 5]), [1, 2, 3, 4]); // => 🛑 Assertion Failed
+
+//what is newArr.concat(arr[i]) doing?
+// newArr.concat(arr[i]) is merging the elements of the array with the elements of the sub-array.
+//so if we have [1, 2, [3, 4], 5, [6]] as the input, newArr.concat(arr[i]) will merge the elements of the sub-array with the elements of the array and will look like this [1, 2, 3, 4, 5, 6].
