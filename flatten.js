@@ -22,7 +22,7 @@ const eqArrays = function(arr1, arr2) {
 const flatten = function(arr) {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) { 
+    if (Array.isArray(arr[i])) {
       newArr = newArr.concat(arr[i]); // use concat to flatten the array. concat is used to merge two or more arrays
     } else {
       newArr.push(arr[i]);
