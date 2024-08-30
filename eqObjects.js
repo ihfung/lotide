@@ -1,7 +1,7 @@
 const eqArrays = function(arr1, arr2) {
   let result = true;
   if (arr1.length !== arr2.length) {
-    result = false;
+    return false;
   }
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
@@ -52,7 +52,7 @@ const eqObjects = function(object1, object2) {
   for (let i of obj1) {
     if (Array.isArray(object1[i]) && Array.isArray(object2[i])) {
       if (!eqArrays(object1[i], object2[i])) {
-        result = false;
+        return false;
       }
     } else if (typeof object1[i] === 'object' && typeof object2[i] === 'object') {
       if (!eqObjects(object1[i], object2[i])) {
